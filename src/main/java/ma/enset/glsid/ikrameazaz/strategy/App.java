@@ -15,8 +15,8 @@ public class App {
             String str=scanner.nextLine();
             strategy=strategyMap.get(str);
             if (strategy == null) {
-                System.out.println("Création d'un nouvel objet de StrategyIml"+str);
-                strategy=(IStrategy) Class.forName("org.example.StrategyImpl"+str).getConstructor().newInstance();
+                System.out.println("Création d'un nouvel objet de StrategyImpl"+str);
+                strategy=(IStrategy) Class.forName("ma.enset.glsid.ikrameazaz.strategy.StrategyImpl"+str).getConstructor().newInstance();
                 strategyMap.put(str,strategy);
             }
             context.setStrategy(strategy);
